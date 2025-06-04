@@ -61,7 +61,7 @@ map_files() {
 		if [ -f "$filepath" ]; then
 			FILEPATHONLY=$SRCDIR # Our path to the file
 			BASENAME=$(basename "$filepath" | tr -d '\n') # The basename of the file
-			FILENAME="${BASENAME##*.}" # This is the name of the file
+			FILENAME="${BASENAME%.*}" # This is the name of the file
 			FILE=$filepath
 			EXT="${BASENAME##*.}" # Extension of the file
 
